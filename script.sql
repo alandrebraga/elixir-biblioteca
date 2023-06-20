@@ -1,0 +1,24 @@
+
+CREATE DATABASE biblioteca;
+
+CREATE TABLE autor (
+	id SERIAL PRIMARY KEY,
+	nome VARCHAR(100) NOT NULL,
+	sobrenome VARCHAR(100) NOT NULL,
+	idade INTEGER NOT NULL,
+	cidade VARCHAR (100) NOT NULL,
+	estado VARCHAR(100) NOT NULL,
+	pais varchar(100) NOT NULL
+);
+
+CREATE TABLE livro (
+	id SERIAL PRIMARY KEY,
+	titulo VARCHAR(100) NOT NULL,
+	descricao TEXT NOT NULL,
+	genero VARCHAR NOT NULL,
+	publicacao DATE NOT NULL,
+	autor_id INTEGER NOT NULL,
+	CONSTRAINT fk_autor_id
+	FOREIGN KEY (id)
+	REFERENCES autor(id)
+);
