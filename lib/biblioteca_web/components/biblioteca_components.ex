@@ -149,4 +149,80 @@ defmodule BibliotecaWeb.BibliotecaComponents do
     </div>
     """
   end
+
+  def renderizar_tabela_livros(assigns) do
+    ~H"""
+    <div class="flex flex-col">
+      <table class="w-full mt-4">
+        <thead>
+          <tr>
+            <th class="px-4 py-2 text-center">Título</th>
+            
+            <th class="px-4 py-2 text-center">Descrição</th>
+            
+            <th class="px-4 py-2 text-center">Gênero</th>
+            
+            <th class="px-4 py-2 text-center">Publicação</th>
+          </tr>
+        </thead>
+        
+        <tbody class="divide-y divide-gray-200">
+          <%= for livro <- Biblioteca.Livro.listar_livros() do %>
+            <tr>
+              <td class="px-4 py-2 text-center"><%= livro.titulo %></td>
+              
+              <td class="px-4 py-2 text-center"><%= livro.descricao %></td>
+              
+              <td class="px-4 py-2 text-center"><%= livro.genero %></td>
+              
+              <td class="px-4 py-2 text-center"><%= livro.publicacao %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    """
+  end
+
+  def renderizar_tabela_autor(assigns) do
+    ~H"""
+    <div class="flex flex-col">
+      <table class="w-full mt-4">
+        <thead>
+          <tr>
+            <th class="px-4 py-2 text-center">Nome</th>
+            
+            <th class="px-4 py-2 text-center">Sobrenome</th>
+            
+            <th class="px-4 py-2 text-center">Idade</th>
+            
+            <th class="px-4 py-2 text-center">Cidade</th>
+            
+            <th class="px-4 py-2 text-center">Estado</th>
+            
+            <th class="px-4 py-2 text-center">Pais</th>
+          </tr>
+        </thead>
+        
+        <tbody class="divide-y divide-gray-200">
+          <%= for autores <- Biblioteca.Autor.listar_autores() do %>
+            <tr>
+              <td class="px-4 py-2 text-center"><%= autores.nome %></td>
+              
+              <td class="px-4 py-2 text-center"><%= autores.sobrenome %></td>
+              
+              <td class="px-4 py-2 text-center"><%= autores.idade %></td>
+              
+              <td class="px-4 py-2 text-center"><%= autores.cidade %></td>
+              
+              <td class="px-4 py-2 text-center"><%= autores.estado %></td>
+              
+              <td class="px-4 py-2 text-center"><%= autores.pais %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    """
+  end
 end
