@@ -20,4 +20,13 @@ defmodule Biblioteca.Livro do
     |> cast(params, @fields)
     |> validate_required(@fields)
   end
+
+  def listar_livros do
+    Biblioteca.Repo.all(Biblioteca.Livro)
+  end
+
+  def listar_livro(id) do
+    Biblioteca.Repo.get(Biblioteca.Livro, id)
+    |> Biblioteca.Repo.preload([:autor])
+  end
 end

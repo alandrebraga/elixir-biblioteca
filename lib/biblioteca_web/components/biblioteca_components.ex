@@ -5,7 +5,7 @@ defmodule BibliotecaWeb.BibliotecaComponents do
     ~H"""
     <div class="container mx-auto p-4">
       <h1 class="text-2xl font-bold mb-4">Create Livro</h1>
-
+      
       <form>
         <div class="mb-4">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="titulo">Título:</label>
@@ -16,7 +16,7 @@ defmodule BibliotecaWeb.BibliotecaComponents do
             placeholder="Enter Título"
           />
         </div>
-
+        
         <div class="mb-4">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="descricao">Descrição:</label> <textarea
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -26,7 +26,7 @@ defmodule BibliotecaWeb.BibliotecaComponents do
           >
           </textarea>
         </div>
-
+        
         <div class="mb-4">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="genero">Gênero:</label>
           <input
@@ -36,19 +36,19 @@ defmodule BibliotecaWeb.BibliotecaComponents do
             placeholder="Enter Gênero"
           />
         </div>
-
+        
         <div class="mb-4">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="publicacao">
             Publicação:
           </label>
-
+          
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="publicacao"
             type="date"
           />
         </div>
-
+        
         <div class="flex items-center justify-between">
           <button
             class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -66,7 +66,7 @@ defmodule BibliotecaWeb.BibliotecaComponents do
     ~H"""
     <div class="container mx-auto p-4">
       <h1 class="text-2xl font-bold mb-4">Create Autor</h1>
-
+      
       <form>
         <div class="grid grid-cols-2 gap-4 mb-4">
           <div>
@@ -78,12 +78,12 @@ defmodule BibliotecaWeb.BibliotecaComponents do
               placeholder="Enter Nome"
             />
           </div>
-
+          
           <div>
             <label class="block text-gray-700 text-sm font-bold mb-2" for="sobrenome">
               Sobrenome:
             </label>
-
+            
             <input
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="sobrenome"
@@ -92,7 +92,7 @@ defmodule BibliotecaWeb.BibliotecaComponents do
             />
           </div>
         </div>
-
+        
         <div class="grid grid-cols-2 gap-4 mb-4">
           <div>
             <label class="block text-gray-700 text-sm font-bold mb-2" for="idade">Idade:</label>
@@ -103,7 +103,7 @@ defmodule BibliotecaWeb.BibliotecaComponents do
               placeholder="Enter Idade"
             />
           </div>
-
+          
           <div>
             <label class="block text-gray-700 text-sm font-bold mb-2" for="cidade">Cidade:</label>
             <input
@@ -114,7 +114,7 @@ defmodule BibliotecaWeb.BibliotecaComponents do
             />
           </div>
         </div>
-
+        
         <div class="grid grid-cols-2 gap-4 mb-4">
           <div>
             <label class="block text-gray-700 text-sm font-bold mb-2" for="estado">Estado:</label>
@@ -125,7 +125,7 @@ defmodule BibliotecaWeb.BibliotecaComponents do
               placeholder="Enter Estado"
             />
           </div>
-
+          
           <div>
             <label class="block text-gray-700 text-sm font-bold mb-2" for="pais">País:</label>
             <input
@@ -136,7 +136,7 @@ defmodule BibliotecaWeb.BibliotecaComponents do
             />
           </div>
         </div>
-
+        
         <div class="flex items-center justify-between">
           <button
             class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
