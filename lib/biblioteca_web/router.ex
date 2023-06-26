@@ -17,7 +17,7 @@ defmodule BibliotecaWeb.Router do
   scope "/", BibliotecaWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    get "/", BibliotecaController, :home
   end
 
   # Other scopes may use custom stacks.
