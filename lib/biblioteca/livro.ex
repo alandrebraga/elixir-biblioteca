@@ -21,6 +21,12 @@ defmodule Biblioteca.Livro do
     |> validate_required(@fields)
   end
 
+  def inserir_livro(params) do
+    params
+    |> Biblioteca.Livro.changeset()
+    |> Biblioteca.Repo.insert()
+  end
+
   def listar_livros do
     Biblioteca.Repo.all(Biblioteca.Livro)
   end
