@@ -2,23 +2,23 @@ defmodule BibliotecaWeb.Router do
   use BibliotecaWeb, :router
 
   pipeline :browser do
-    plug :accepts, ["html"]
-    plug :fetch_session
-    plug :fetch_live_flash
-    plug :put_root_layout, html: {BibliotecaWeb.Layouts, :root}
-    plug :protect_from_forgery
-    plug :put_secure_browser_headers
+    plug(:accepts, ["html"])
+    plug(:fetch_session)
+    plug(:fetch_live_flash)
+    plug(:put_root_layout, html: {BibliotecaWeb.Layouts, :root})
+    plug(:put_secure_browser_headers)
   end
 
   pipeline :api do
-    plug :accepts, ["json"]
+    plug(:accepts, ["json"])
   end
 
   scope "/", BibliotecaWeb do
-    pipe_through :browser
+    pipe_through(:browser)
 
-    get "/", BibliotecaController, :home
-    resources "/cadastro", BibliotecaController, only: [:index]
+    get("/", BibliotecaController, :home)
+    resources("/cadastro", BibliotecaController, only: [:index])
+    resources("/autor", AutorController, only: [:create])
   end
 
   # Other scopes may use custom stacks.
@@ -36,10 +36,10 @@ defmodule BibliotecaWeb.Router do
     import Phoenix.LiveDashboard.Router
 
     scope "/dev" do
-      pipe_through :browser
+      pipe_through(:browser)
 
-      live_dashboard "/dashboard", metrics: BibliotecaWeb.Telemetry
-      forward "/mailbox", Plug.Swoosh.MailboxPreview
+      live_dashboard("/dashboard", metrics: BibliotecaWeb.Telemetry)
+      forward("/mailbox", Plug.Swoosh.MailboxPreview)
     end
   end
 end

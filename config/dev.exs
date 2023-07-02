@@ -3,9 +3,9 @@ import Config
 # Configure your database
 config :biblioteca, Biblioteca.Repo,
   username: "postgres",
-  password: "root",
+  password: "admin",
   hostname: "localhost",
-  database: "biblioteca_db",
+  database: "biblioteca",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10

@@ -67,13 +67,14 @@ defmodule BibliotecaWeb.BibliotecaComponents do
     <div class="container mx-auto p-4">
       <h1 class="text-2xl font-bold mb-4">Create Autor</h1>
     
-      <form>
+      <form action="http://localhost:4000/autor" method="POST">
         <div class="grid grid-cols-2 gap-4 mb-4">
           <div>
             <label class="block text-gray-700 text-sm font-bold mb-2" for="nome">Nome:</label>
             <input
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="nome"
+              name="autor[nome]"
               type="text"
               placeholder="Enter Nome"
             />
@@ -88,6 +89,7 @@ defmodule BibliotecaWeb.BibliotecaComponents do
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="sobrenome"
               type="text"
+              name="autor[sobrenome]"
               placeholder="Enter Sobrenome"
             />
           </div>
@@ -100,6 +102,7 @@ defmodule BibliotecaWeb.BibliotecaComponents do
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="idade"
               type="number"
+              name="autor[idade]"
               placeholder="Enter Idade"
             />
           </div>
@@ -110,6 +113,7 @@ defmodule BibliotecaWeb.BibliotecaComponents do
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="cidade"
               type="text"
+              name="autor[cidade]"
               placeholder="Enter Cidade"
             />
           </div>
@@ -122,6 +126,7 @@ defmodule BibliotecaWeb.BibliotecaComponents do
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="estado"
               type="text"
+              name="autor[estado]"
               placeholder="Enter Estado"
             />
           </div>
@@ -132,6 +137,7 @@ defmodule BibliotecaWeb.BibliotecaComponents do
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="pais"
               type="text"
+              name="autor[pais]"
               placeholder="Enter País"
             />
           </div>
