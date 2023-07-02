@@ -18,6 +18,7 @@ defmodule BibliotecaWeb.Router do
     pipe_through :browser
 
     get "/", BibliotecaController, :home
+    resources "/cadastro", BibliotecaController, only: [:index]
   end
 
   # Other scopes may use custom stacks.
